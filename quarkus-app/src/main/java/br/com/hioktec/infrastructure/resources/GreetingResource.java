@@ -1,4 +1,4 @@
-package br.com.hioktec;
+package br.com.hioktec.infrastructure.resources;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
