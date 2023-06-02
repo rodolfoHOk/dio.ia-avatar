@@ -65,7 +65,7 @@ public class CustomerProfilePhotos {
   }
 
   @Embeddable
-  static class CompositeKey {
+  public static class CompositeKey {
 
     @Column(name = "customer_id", nullable = false)
     private String customerId;
