@@ -3,9 +3,11 @@ package br.com.hioktec.infrastructure.repositories;
 import br.com.hioktec.domain.models.ProfilePhoto;
 import br.com.hioktec.domain.repositories.ProfilePhotoPersistenceRepository;
 import br.com.hioktec.infrastructure.repositories.entities.CustomerProfilePhotos;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 
+@ApplicationScoped
 public class HibernateProfilePhotoPersistenceRepository implements ProfilePhotoPersistenceRepository {
 
   private final EntityManager entityManager;

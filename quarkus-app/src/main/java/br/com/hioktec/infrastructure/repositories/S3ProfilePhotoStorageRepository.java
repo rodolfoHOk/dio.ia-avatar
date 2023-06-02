@@ -3,6 +3,7 @@ package br.com.hioktec.infrastructure.repositories;
 import br.com.hioktec.domain.models.ProfilePhoto;
 import br.com.hioktec.domain.repositories.ProfilePhotoStorageRepository;
 import io.smallrye.mutiny.Uni;
+import jakarta.enterprise.context.ApplicationScoped;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import software.amazon.awssdk.core.async.AsyncRequestBody;
 import software.amazon.awssdk.services.s3.S3AsyncClient;
@@ -16,6 +17,7 @@ import java.time.Duration;
 import java.util.Base64;
 import java.util.concurrent.CompletableFuture;
 
+@ApplicationScoped
 public class S3ProfilePhotoStorageRepository implements ProfilePhotoStorageRepository {
 
   @ConfigProperty(name = "quarkus.s3.devservices.buckets")
