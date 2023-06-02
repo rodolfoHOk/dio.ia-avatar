@@ -4,10 +4,12 @@ import br.com.hioktec.domain.models.ProfilePhoto;
 import br.com.hioktec.domain.repositories.reactives.ReactiveProfilePhotoRepository;
 import br.com.hioktec.infrastructure.repositories.S3ProfilePhotoStorageRepository;
 import br.com.hioktec.infrastructure.rest.services.StableDiffusionService;
+import jakarta.enterprise.context.ApplicationScoped;
 import org.jboss.logging.Logger;
 
 import java.util.Map;
 
+@ApplicationScoped
 public class ReactiveUnitOfWorkProfilePhotoRepository implements ReactiveProfilePhotoRepository {
 
   private final MariaDBReactiveProfilePhotoPersistenceRepository persistenceRepository;

@@ -5,7 +5,9 @@ import br.com.hioktec.domain.repositories.reactives.ReactiveProfilePhotoPersiste
 import io.smallrye.mutiny.Uni;
 import io.vertx.mutiny.mysqlclient.MySQLPool;
 import io.vertx.mutiny.sqlclient.Tuple;
+import jakarta.enterprise.context.ApplicationScoped;
 
+@ApplicationScoped
 public class MariaDBReactiveProfilePhotoPersistenceRepository implements ReactiveProfilePhotoPersistenceRepository {
 
   private final MySQLPool client;
