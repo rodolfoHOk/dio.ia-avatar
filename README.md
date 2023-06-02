@@ -2,6 +2,28 @@
  
 > Live coding DIO
 
+## Tecnologias
+
+### API
+
+- Java
+- Quarkus framework
+- Hibernate ORM
+- MariaDB
+- Rest API
+- Storage Amazon S3
+- Rest Client
+- OpenAPI
+- Prometheus Metrics
+
+### Inteligência artificial generativa
+
+- Python
+- Stable Diffusion Web UI
+- Hugging Face
+- stable-diffusion-v1-5 model (https://huggingface.co/runwayml/stable-diffusion-v1-5)
+- Realistic_Vision_V2.0 model (https://huggingface.co/SG161222/Realistic_Vision_V2.0)
+
 ## Links úteis
 
 [Inteligência Artificial Generativa com Modelos de Difusão (Stable Diffusion)](https://web.dio.me/articles/inteligencia-artificial-generativa-com-modelos-de-difusao-stable-diffusion?back=%2Farticles&page=1&order=oldest)
@@ -22,4 +44,4 @@
 
 ## Repositório Github
 
-- https://github.com/thpoiani/avatar/tree/video07
+- [API](https://github.com/rodolfoHOk/dio.ia-avatar/tree/main/quarkus-app)
