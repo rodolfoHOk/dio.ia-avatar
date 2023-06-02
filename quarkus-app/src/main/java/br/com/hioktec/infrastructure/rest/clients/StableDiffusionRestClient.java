@@ -8,11 +8,11 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import java.util.List;
 
-@RegisterRestClient(configKey = "stable-diffusion-api")
+@RegisterRestClient(configKey="stable-diffusion-api")
 public interface StableDiffusionRestClient {
 
   @POST
-  @Path(value = "/sdapi/v1/img2img")
+  @Path(value="/sdapi/v1/img2img")
   Uni<StableDiffusionResponse> img2img(StableDiffusionRequest request);
 
   record StableDiffusionRequest(

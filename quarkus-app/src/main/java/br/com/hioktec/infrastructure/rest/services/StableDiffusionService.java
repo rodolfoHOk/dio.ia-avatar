@@ -6,6 +6,7 @@ import io.smallrye.mutiny.Uni;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.transaction.Transactional;
 import org.apache.commons.io.FileUtils;
+import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,7 +17,7 @@ import java.util.NoSuchElementException;
 public class StableDiffusionService {
   private final StableDiffusionRestClient stableDiffusionRestClient;
 
-  public StableDiffusionService(StableDiffusionRestClient stableDiffusionRestClient) {
+  public StableDiffusionService(@RestClient StableDiffusionRestClient stableDiffusionRestClient) {
     this.stableDiffusionRestClient = stableDiffusionRestClient;
   }
 
