@@ -43,7 +43,7 @@ public class MariaDBReactiveCustomerRepository implements ReactiveCustomerReposi
   @Override
   public Uni<Customer> findById(String id) {
     Uni<RowSet<Row>> rowSet = client
-      .preparedQuery("SELECT * FROM profile_photos WHERE id = $1")
+      .preparedQuery("SELECT * FROM profile_photos WHERE customer_id = ?")
       .execute(Tuple.of(id));
 
     Uni<CustomerProfilePhotos> customerProfilePhotos = rowSet

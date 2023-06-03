@@ -19,7 +19,7 @@ public class MariaDBReactiveProfilePhotoPersistenceRepository implements Reactiv
   @Override
   public Uni<String> save(String customerId, ProfilePhoto profilePhoto) {
     return client
-      .preparedQuery("INSERT INTO profile_photos (customer_id, id, original_photo, generated_photo) VALUES ($1, $2, $3, $4)")
+      .preparedQuery("INSERT INTO profile_photos (customer_id, id, original_photo, generated_photo) VALUES (?, ?, ?, ?)")
       .execute(Tuple.of(customerId, profilePhoto.id(), profilePhoto.originalPhoto(), profilePhoto.generatedPhoto()))
       .onItem().transform(rowSet -> rowSet.iterator().next().getString("customer_id"));
   }
