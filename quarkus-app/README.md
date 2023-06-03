@@ -61,5 +61,6 @@ Easily start your Reactive RESTful Web Services
 
 ## Quarkus commands guide
 
+- Install quarkus cli: sdk install quarkus
 - Create quarkus app: quarkus create app br.com.hioktec:quarkus-app
 - Add quarkus extension: quarkus ext add io.quarkus:quarkus-hibernate-orm
